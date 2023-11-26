@@ -12,6 +12,7 @@
 		8474E2882B138CFD00C171EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E2872B138CFD00C171EE /* ViewController.swift */; };
 		8474E28D2B138CFE00C171EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8474E28C2B138CFE00C171EE /* Assets.xcassets */; };
 		8474E2902B138CFE00C171EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8474E28E2B138CFE00C171EE /* LaunchScreen.storyboard */; };
+		8474E2982B13940300C171EE /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E2972B13940300C171EE /* LetterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		8474E28C2B138CFE00C171EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8474E28F2B138CFE00C171EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8474E2912B138CFE00C171EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8474E2972B13940300C171EE /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				8474E2832B138CFD00C171EE /* AppDelegate.swift */,
 				8474E2852B138CFD00C171EE /* SceneDelegate.swift */,
 				8474E2872B138CFD00C171EE /* ViewController.swift */,
+				8474E2972B13940300C171EE /* LetterCollectionViewCell.swift */,
 				8474E28C2B138CFE00C171EE /* Assets.xcassets */,
 				8474E28E2B138CFE00C171EE /* LaunchScreen.storyboard */,
 				8474E2912B138CFE00C171EE /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8474E2982B13940300C171EE /* LetterCollectionViewCell.swift in Sources */,
 				8474E2882B138CFD00C171EE /* ViewController.swift in Sources */,
 				8474E2842B138CFD00C171EE /* AppDelegate.swift in Sources */,
 				8474E2862B138CFD00C171EE /* SceneDelegate.swift in Sources */,

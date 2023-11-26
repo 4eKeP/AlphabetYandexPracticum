@@ -7,7 +7,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    
+    private let letters = [
+                "а", "б", "в", "г", "д", "е", "ё", "ж", "з", "и", "й", "к",
+                "л", "м", "н", "о", "п", "р", "с", "т", "у", "ф", "х", "ц",
+                "ч", "ш" , "щ", "ъ", "ы", "ь", "э", "ю", "я"
+            ]
 
     private let cellIdentifier = "cell"
     
@@ -21,12 +27,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
+        
     }
 
     private func setupView() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
+        collectionView.register(LetterCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.dataSource = self
     }
     
     private func setupConstraints() {
@@ -37,6 +45,21 @@ class ViewController: UIViewController {
             collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor)
         ])
     }
+}
 
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        letters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? LetterCollectionViewCell
+        
+        cell?.titleLable.text = letters[indexPath.row]
+        guard let cell = cell else {
+            print("Не получилось создать ячейку")
+            return UICollectionViewCell() }
+        return cell
+    }
 }
 
