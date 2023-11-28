@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8425DE522B16292C00FA1FD5 /* SupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425DE512B16292C00FA1FD5 /* SupplementaryView.swift */; };
 		8474E2842B138CFD00C171EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E2832B138CFD00C171EE /* AppDelegate.swift */; };
 		8474E2862B138CFD00C171EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E2852B138CFD00C171EE /* SceneDelegate.swift */; };
 		8474E2882B138CFD00C171EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8474E2872B138CFD00C171EE /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8425DE512B16292C00FA1FD5 /* SupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryView.swift; sourceTree = "<group>"; };
 		8474E2802B138CFD00C171EE /* AlphabetYandexPracticum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphabetYandexPracticum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8474E2832B138CFD00C171EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8474E2852B138CFD00C171EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				8474E2832B138CFD00C171EE /* AppDelegate.swift */,
 				8474E2852B138CFD00C171EE /* SceneDelegate.swift */,
 				8474E2872B138CFD00C171EE /* ViewController.swift */,
+				8425DE512B16292C00FA1FD5 /* SupplementaryView.swift */,
 				8474E2972B13940300C171EE /* LetterCollectionViewCell.swift */,
 				8474E28C2B138CFE00C171EE /* Assets.xcassets */,
 				8474E28E2B138CFE00C171EE /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				8474E2982B13940300C171EE /* LetterCollectionViewCell.swift in Sources */,
 				8474E2882B138CFD00C171EE /* ViewController.swift in Sources */,
+				8425DE522B16292C00FA1FD5 /* SupplementaryView.swift in Sources */,
 				8474E2842B138CFD00C171EE /* AppDelegate.swift in Sources */,
 				8474E2862B138CFD00C171EE /* SceneDelegate.swift in Sources */,
 			);
