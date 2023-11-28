@@ -117,13 +117,49 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 
 extension ViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
+//        cell?.titleLable.font = UIFont.boldSystemFont(ofSize: 17)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
+//        cell?.titleLable.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
+        guard indexPaths.count > 0 else {
+            return nil
+        }
+        
+        let indexPath = indexPaths[0]
+        
+        return UIContextMenuConfiguration(actionProvider: {actions in
+        
+            return UIMenu(children: [
+                UIAction(title: "Bold") { [weak self] _ in
+                self?.makeBold(indexPath: indexPath)
+            },
+            UIAction(title: "Italic") { [weak self] _ in
+                self?.makeItalic(indexPath: indexPath)
+            }
+          ])
+        })
+    }
+    
+    //если ios<16 (различие в том что меню можно вызывать только к одному обекту а не к массиву как в более новых версиях )
+//    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+//    }
+    
+    private func makeBold(indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
         cell?.titleLable.font = UIFont.boldSystemFont(ofSize: 17)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    private func makeItalic(indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
-        cell?.titleLable.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+        cell?.titleLable.font = UIFont.italicSystemFont(ofSize: 17)
     }
+   
+    
 }
 
