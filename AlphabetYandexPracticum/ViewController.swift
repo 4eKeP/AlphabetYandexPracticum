@@ -27,6 +27,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
+        collectionView.allowsMultipleSelection = false
         
     }
 
@@ -111,6 +112,18 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     //задаеться растояние между ячейками
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
+        cell?.titleLable.font = UIFont.boldSystemFont(ofSize: 17)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
+        cell?.titleLable.font = UIFont.systemFont(ofSize: 17, weight: .regular)
     }
 }
 
